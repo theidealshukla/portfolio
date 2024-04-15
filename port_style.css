@@ -20,13 +20,15 @@ nav {
   padding: 10px 0;
   height: 20px;
   display: flex;
+
   width: 100%;
   
   top: 0px;
   
   position: sticky;
   align-items:center;
-  justify-content: center;
+  justify-content:center;
+ 
   
   
 }
@@ -56,6 +58,7 @@ nav a {
   color: #fff;
   text-decoration: none;
   scroll-behavior: smooth;
+  font-size: small;
   
 }
 
