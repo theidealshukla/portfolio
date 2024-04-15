@@ -20,11 +20,15 @@ nav {
   padding: 10px 0;
   height: 20px;
   display: flex;
-  top: 0px;
   width: 100%;
+  
+  top: 0px;
+  
   position: sticky;
-  align-items: center;
+  align-items:center;
   justify-content: center;
+  
+  
 }
 
 .aboutme {
@@ -35,18 +39,24 @@ nav {
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: center;
+
+  
+  justify-content:center;
   padding: 0;
+  
 }
 
 nav li {
   margin: 0 10px;
+  display: flex;
+  
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
   scroll-behavior: smooth;
+  
 }
 
 main {
@@ -98,6 +108,7 @@ footer {
   display: flex;
   text-align: center;
   justify-content: space-around;
+  
 }
 
 .feature {
@@ -129,20 +140,19 @@ footer {
 }
 
 .resume-container {
-  display: flex;
+  
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
 }
 
-.resume-preview {
-  flex: 1;
-}
 
 .resume-actions {
   flex: 0 0 200px;
   text-align: center;
+  display: block;
 }
+
 
 .btn-download {
   display: inline-block;
