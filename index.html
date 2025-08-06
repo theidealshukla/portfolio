@@ -1,111 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>theidealshukla</title>
-  <link rel="stylesheet" href="port_style.css">
-  <link rel="stylesheet" href="dimsemenov-Magnific-Popup-6b7a808">
-</head>
-
-<body>
-  <header>
-
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#resume">Resume</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <div class="hero">
-      <div>
-
-
-        <h1>Adarsh Shukla</h1>
-        <p>Developing Code,Capturing Life</p>
-
-      </div>
-    </div>
-    <section class="aboutme" id="about">
-      <h2>About Me</h2>
-      <p>Hi, I'm Adarsh Kumar Shukla. I'm a web developer and photographer currently in my 4th semester of studies.
-
-        In my web development work, I focus on creating minimal, interactive, and aesthetically pleasing websites. I
-        combine my technical skills with a creative vision to craft engaging online experiences .
-
-        Beyond web development, I'm an avid photographer. I find inspiration in the beauty of the natural world as well
-        as the nuances of everyday life, which I strive to capture through my lens.
-
-      </p>
-
-
-    </section>
-
-
-    <div class="feature" id="projects">
-      <h2>Projects</h2>
-      <p>Check out some of my recent projects:</p>
-      <ol type="1">
-        <li><a href="https://theidealshukla.github.io/youtubeclone/">YouTube Clone</a> </li>
-      </ol>
-    </div>
-    <div class="digital-gallery">
-      <h2>Digital Gallery</h2>
-      <p>
-        Check out my digital gallery on <a href="https://www.instagram.com/thenonidealist/">Instagram.</a></p>
-    </div>
-   
-        
-      
-
-
-    </div>
-    <section class="resume-section" id="resume">
-      <h2>Resume</h2>
-      <div class="resume-container">
-        <p>In addition to my projects and digital gallery, you can find a detailed overview of my professional background and qualifications in the resume section below.</p>
-        
-        <div class="resume-actions">
-          
-          <a href="Adarsh Kumar Shukla resume.pdf" class="btn-download" download>Download PDF</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="contact" id="contact">
-      <p>Feel free to Contact me </p>
-      <div class="social">
-        <a href="https://github.com/theidealshukla"><img src="icons/github.svg"></a>
-        <a href="https://www.linkedin.com/in/theidealshukla/"> <img src="icons/linkedin.svg"></a>
-       <a href="https://www.instagram.com/theidealshukla/"> <img src="icons/instagram.svg"></a>
-       
-       
-
-
-      </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Kumar Shukla - Developer & Photographer</title>
     
-      
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <code>&lt;Adarsh /&gt;</code>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Move theme toggle here -->
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            
+            <div class="nav-hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badges">
+                    <div class="hero-badge">
+                        <i class="fas fa-code"></i>
+                        <span>Frontend Developer</span>
+                    </div>
+                    <div class="hero-badge">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Data Science</span>
+                    </div>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="greeting">Hi, I'm</span>
+                    <span class="name">Adarsh Kumar Shukla</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Building digital experiences with modern web technologies
+                    and capturing moments through photography.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <!-- <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Photos</span>
+                    </div> -->
+                    <div class="stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-folder-open"></i>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <span class="window-title">developer.js</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Adarsh Kumar Shukla"</span>,
+  <span class="property">role</span>: <span class="string">"Frontend Developer","Data Scientist"</span>,
+  <span class="property">skills</span>: [
+    <span class="string">"JavaScript"</span>,
+    <span class="string">"HTML/CSS"</span>,
+    <span class="string">"Bootstrap"</span>,
+  ],
+  <span class="property">passion</span>: <span class="string">"Creating & Capturing"</span>
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-user"></i>
+                    About Me
+                </h2>
+                <p>Getting to know me better</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="readme-style">
+                        <h3>README.md</h3>
+                        <div class="readme-content">
+                            <p>
+                                Hi, I'm <strong>Adarsh Kumar Shukla</strong>, a web developer, AI enthusiast, and photographer in my 
+                                <strong>pre-final year of B.Tech CSE</strong>. I craft smart, scalable web applications that merge 
+                                sleek design with meaningful functionality.
+                            </p>
+                            
+                            <p>
+                                From AI-powered dashboards to real-time feedback systems, I love building things that solve real problems. 
+                                My work blends modern technologies like Firebase, JavaScript, and Claude 3 with a user-first mindset. 
+                                Beyond code, you'll often find me capturing the world through my lens.
+                            </p>
+                            
+                            <div class="skills-section">
+                                <h4>🛠️ Tech Stack</h4>
+                                <div class="tech-grid">
+                                    <!-- Frontend -->
+                                    <div class="tech-item">
+                                        <i class="fab fa-html5"></i>
+                                        <span>HTML</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fab fa-css3-alt"></i>
+                                        <span>CSS</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fab fa-js-square"></i>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fab fa-react"></i>
+                                        <span>React.js</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fab fa-css3"></i>
+                                        <span>Tailwind CSS</span>
+                                    </div>
+                                    
+                                    <!-- Backend & Databases -->
+                                    <div class="tech-item">
+                                        <i class="fas fa-fire"></i>
+                                        <span>Firebase</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-database"></i>
+                                        <span>SQL</span>
+                                    </div>
+                                    
+                                    <!-- Data Science -->
+                                    <div class="tech-item">
+                                        <i class="fab fa-python"></i>
+                                        <span>Python</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-table"></i>
+                                        <span>Pandas</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="fas fa-calculator"></i>
+                                        <span>NumPy</span>
+                                    </div>
+                                    
+                                    <!-- Version Control -->
+                                    <div class="tech-item">
+                                        <i class="fab fa-github"></i>
+                                        <span>GitHub</span>
+                                    </div>
+                                    
+                                    <!-- Other Skills -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <div class="avatar">
+                                <img src="profile-picture.jpg" alt="Adarsh Kumar Shukla">
+                                <div class="status-indicator"></div>
+                            </div>
+                            <div class="user-info">
+                                <h3>Adarsh Kumar Shukla</h3>
+                                <p>@theidealshukla</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="contribution-graph">
+                                <h4>Contribution Graph</h4>
+                                <div class="graph-grid">
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-folder-open"></i>
+                    Featured Projects
+                </h2>
+                <p>Some of my recent work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: YouTube Clone -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <h3>
+                                <i class="fas fa-play"></i>
+                                YouTube Clone
+                            </h3>
+                            <p class="project-meta">HTML • CSS • Responsive Design</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://theidealshukla.github.io/youtubeclone/" target="_blank" class="link-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/theidealshukla/youtubeclone" target="_blank" class="link-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-image">
+                        <img src="project-thumbnails/Youtube clone.png" alt="YouTube Clone">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <p>A responsive YouTube interface clone built with HTML and CSS</p>
+                                <div class="tech-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">Responsive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Project 2: Spotify Clone -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <h3>
+                                <i class="fab fa-spotify"></i>
+                                Spotify Clone
+                            </h3>
+                            <p class="project-meta">HTML • CSS • UI Design</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://theidealshukla.github.io/spotify-clone/" target="_blank" class="link-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/theidealshukla/spotify-clone" target="_blank" class="link-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-image">
+                        <img src="project-thumbnails/Spotify clone.png" alt="Spotify Clone">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <p>A static Spotify UI clone with pixel-perfect recreation</p>
+                                <div class="tech-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">UI Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Project 3: Expense Tracker -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <h3>
+                                <i class="fas fa-chart-line"></i>
+                                Expense Tracker
+                            </h3>
+                            <p class="project-meta">JavaScript • Bootstrap • Local Storage</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://theidealshukla.github.io/Expense-tracker/" target="_blank" class="link-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/theidealshukla/Expense-tracker" target="_blank" class="link-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-image">
+                        <img src="project-thumbnails/logo.png" alt="Expense Tracker">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <p>A dynamic web application for tracking daily expenses</p>
+                                <div class="tech-tags">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Bootstrap</span>
+                                    <span class="tag">Local Storage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Project: Survey & Feedback Portal -->
+                <div class="project-card" data-category="fullstack ai">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <h3>
+                                <i class="	fas fa-tools"></i>
+                                Survey & Feedback Portal
+                            </h3>
+                            <p class="project-meta">HTML • CSS • JavaScript • Firebase • Claude 3 API</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/theidealshukla/survey-feedback-portal" target="_blank" class="link-btn" aria-label="View source code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://survey-feedback-portal.netlify.app/admin.html" target="_blank" class="link-btn" aria-label="Open live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="project-thumbnails/dashboard.png" alt="Survey & Feedback Portal Dashboard">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <p>A full-stack survey and complaint management system with an AI-powered admin dashboard</p>
+                                <div class="tech-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Firebase</span>
+                                    <span class="tag">Firestore</span>
+                                    <span class="tag">EmailJS</span>
+                                    <span class="tag">Claude 3 API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </main>
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-camera"></i>
+                    Digital Gallery
+                </h2>
+                <p>Capturing moments through my lens</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="digital gallery/thumb1.jpg" alt="Gallery Image 1">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="digital gallery/thumb2.jpg" alt="Gallery Image 2">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="digital gallery/thumb3.jpg" alt="Gallery Image 3">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="digital gallery/thumb4.jpg" alt="Gallery Image 4">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="digital gallery/thumb5.jpg" alt="Gallery Image 5">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="digital gallery/thumb6.jpg" alt="Gallery Image 6">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-actions">
+                <a href="https://www.instagram.com/thenonidealist/" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-instagram"></i>
+                    View more on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2024 Adarsh Kumar Shukla. All rights reserved.</p>
-  </footer>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </h2>
+                <p>Let's work together</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3>Let's collaborate!</h3>
+                    <p>
+                        I'm always interested in new opportunities and collaborations. Whether 
+                        you have a project in mind or just want to chat about web development 
+                        and photography, feel free to reach out!
+                    </p>
+                    
+                    <div class="resume-section">
+                        <h4>Download Resume</h4>
+                        <p>Get a detailed overview of my professional background and qualifications.</p>
+                        <a href="Adarsh_Shukla_resume.pdf" class="btn btn-outline" download>
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-links">
+                    <a href="https://github.com/theidealshukla" target="_blank" class="contact-link">
+                        <div class="link-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="link-content">
+                            <h4>GitHub</h4>
+                            <p>Check out my repositories</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/theidealshukla/" target="_blank" class="contact-link">
+                        <div class="link-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="link-content">
+                            <h4>LinkedIn</h4>
+                            <p>Connect professionally</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/thenonidealist/" target="_blank" class="contact-link">
+                        <div class="link-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="link-content">
+                            <h4>Instagram</h4>
+                            <p>View my photography</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adarsh Kumar Shukla. Built with ❤️ and lots of ☕</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
-
 </html>
