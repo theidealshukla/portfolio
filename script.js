@@ -960,21 +960,6 @@ function showNotification(message, type = 'info', duration = 3000) {
 // ERROR HANDLING
 // ========================================
 
-// Global error handler
-window.addEventListener('error', (e) => {
-    console.error('JavaScript error:', e.error);
-    showNotification('An error occurred. Please refresh the page.', 'error');
-});
-
-// Unhandled promise rejection handler
-window.addEventListener('unhandledrejection', (e) => {
-    console.error('Unhandled promise rejection:', e.reason);
-    e.preventDefault();
-});
-
-// ========================================
-// LEGACY SMOOTH SCROLLING (Fallback)
-// ========================================
 
 // Smooth scrolling for anchor links (fallback)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
