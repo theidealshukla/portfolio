@@ -836,9 +836,7 @@ function initializePerformanceMonitoring() {
     });
 }
 
-// ========================================
-// UTILITY FUNCTIONS
-// ========================================
+
 
 // Smooth scrolling with easing
 function smoothScrollTo(targetY, duration) {
@@ -956,9 +954,7 @@ function showNotification(message, type = 'info', duration = 3000) {
     }
 }
 
-// ========================================
-// ERROR HANDLING
-// ========================================
+
 
 
 // Smooth scrolling for anchor links (fallback)
