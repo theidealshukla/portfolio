@@ -1,0 +1,58 @@
+/* =================================================================
+   PROJECT.HTML STYLES
+   ================================================================= */
+
+/* Noise Texture Overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 50;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBbMoTxHmwHsB6iRg9O5gI5aYQlFq3BwS7dS3v7vPkTvoNMCRuePf7RKswOGAEGSRBuE3YvMpi_du9Rr-9W8N3qP4E0eY533d4ATu_b5OF-TLLNSr0Cjxq61rzPymD6LE83BdtD_rsMwfBHxKgoww3wsH8IdxS5sjY1FAuuIWsfWsmToHgxIQ9Sf93H4I-jpeD5fNBwXWhDItGPjk_JT6_DQXriJkqAVngUFUofJARub-bzfAJWUHTer1_G6pk9oTIPh70fsFYWJfA)
+}
+
+/* Glass Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translatey(-4px)
+}
+
+/* Project Image Container */
+.project-image-container {
+    overflow: hidden;
+    border-radius: 1rem
+}
+
+.project-image-container img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.glass-card:hover .project-image-container img {
+    transform: scale(1.08)
+}
+
+/* Text Outline Effect */
+.outline-text {
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.05);
+    color: transparent
+}
+
+/* Active Tab Styling */
+.active-tab {
+    background: #000000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+}

@@ -13,81 +13,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#000000",
-                        "background-light": "#ffffff",
-                        "background-dark": "#050505",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "2xl": "2rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-    <style>
-        .noise-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            opacity: 0.03;
-            z-index: 50;
-            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBbMoTxHmwHsB6iRg9O5gI5aYQlFq3BwS7dS3v7vPkTvoNMCRuePf7RKswOGAEGSRBuE3YvMpi_du9Rr-9W8N3qP4E0eY533d4ATu_b5OF-TLLNSr0Cjxq61rzPymD6LE83BdtD_rsMwfBHxKgoww3wsH8IdxS5sjY1FAuuIWsfWsmToHgxIQ9Sf93H4I-jpeD5fNBwXWhDItGPjk_JT6_DQXriJkqAVngUFUofJARub-bzfAJWUHTer1_G6pk9oTIPh70fsFYWJfA)
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-        }
-
-        .glass-card:hover {
-            background: rgba(255, 255, 255, 0.95);
-            border-color: rgba(0, 0, 0, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            transform: translatey(-4px)
-        }
-
-        .project-image-container {
-            overflow: hidden;
-            border-radius: 1rem
-        }
-
-        .project-image-container img {
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)
-        }
-
-        .glass-card:hover .project-image-container img {
-            transform: scale(1.08)
-        }
-
-        .outline-text {
-            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.05);
-            color: transparent
-        }
-
-        .active-tab {
-            background: #000000;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
-        }
-    </style>
+    <!-- Tailwind Configuration -->
+    <script src="js/tailwind-minimalist.config.js"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/project.css" />
 </head>
 
 <body class="bg-background-light font-display text-slate-900 selection:bg-black selection:text-white">
