@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>All Projects | Portfolio Bento</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background-light": "#ffffff",
+                        "background-dark": "#050505",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            z-index: 50;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBbMoTxHmwHsB6iRg9O5gI5aYQlFq3BwS7dS3v7vPkTvoNMCRuePf7RKswOGAEGSRBuE3YvMpi_du9Rr-9W8N3qP4E0eY533d4ATu_b5OF-TLLNSr0Cjxq61rzPymD6LE83BdtD_rsMwfBHxKgoww3wsH8IdxS5sjY1FAuuIWsfWsmToHgxIQ9Sf93H4I-jpeD5fNBwXWhDItGPjk_JT6_DQXriJkqAVngUFUofJARub-bzfAJWUHTer1_G6pk9oTIPh70fsFYWJfA)
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: translatey(-4px)
+        }
+
+        .project-image-container {
+            overflow: hidden;
+            border-radius: 1rem
+        }
+
+        .project-image-container img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)
+        }
+
+        .glass-card:hover .project-image-container img {
+            transform: scale(1.08)
+        }
+
+        .outline-text {
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.05);
+            color: transparent
+        }
+
+        .active-tab {
+            background: #000000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display text-slate-900 selection:bg-black selection:text-white">
+    <!-- Grain Texture -->
+    <div class="noise-overlay"></div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 px-6 py-6 flex justify-between items-center w-full max-w-7xl mx-auto">
+        <a class="flex items-center gap-2 group cursor-pointer" href="index.html">
+            <span class="font-bold tracking-widest text-sm uppercase text-slate-900">Adarsh.Shukla</span>
+        </a>
+        <div
+            class="hidden md:flex items-center gap-1 bg-white/70 backdrop-blur-md rounded-full px-2 py-1.5 border border-gray-200 shadow-sm">
+            <a class="px-5 py-2 text-sm font-medium hover:bg-gray-100/50 rounded-full transition-colors text-black font-bold"
+                href="project.html">Work</a>
+            <a class="px-5 py-2 text-sm font-medium hover:bg-gray-100/50 rounded-full transition-colors text-slate-500 hover:text-slate-900"
+                href="services.html">Services</a>
+            <a class="px-5 py-2 text-sm font-medium hover:bg-gray-100/50 rounded-full transition-colors text-slate-500 hover:text-slate-900"
+                href="gallery.html">Gallery</a>
+            <a class="px-5 py-2 text-sm font-medium hover:bg-gray-100/50 rounded-full transition-colors text-slate-500 hover:text-slate-900"
+                href="about.html">About</a>
+        </div>
+        <a href="contact.html"
+            class="hidden md:flex items-center gap-2 text-sm font-bold border-2 border-black text-black hover:bg-black hover:text-white rounded-full px-5 py-2 transition-all duration-300 group shadow-md shadow-black/10">
+            <span>Contact</span>
+            <span
+                class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+        <button class="md:hidden text-slate-900 p-2">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </nav>
+    <main class="relative pt-32 pb-24 px-6 max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <header class="mb-16 relative">
+            <h2
+                class="absolute -top-12 -left-4 text-8xl font-bold outline-text uppercase tracking-tighter pointer-events-none select-none">
+                Portfolio
+            </h2>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+                All Projects<span class="text-black">.</span>
+            </h1>
+            <!-- Filter System -->
+            <div class="flex flex-wrap items-center gap-3">
+                <button class="active-tab text-white px-8 py-3 rounded-full text-sm font-semibold transition-all">
+                    All Projects
+                </button>
+                <button
+                    class="bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
+                    Academic
+                </button>
+                <button
+                    class="bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
+                    Client Work
+                </button>
+                <button
+                    class="bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
+                    Experiments
+                </button>
+            </div>
+        </header>
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 auto-rows-[280px] gap-6">
+            <!-- Neon Tokyo - Large Feature -->
+            <div class="md:col-span-8 md:row-span-2 glass-card rounded-2xl p-6 flex flex-col group">
+                <div class="project-image-container flex-grow relative mb-6">
+                    <img alt="Neon Tokyo Project" class="w-full h-full object-cover rounded-xl"
+                        data-alt="Futuristic neon lit Tokyo cityscape at night"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpZ7CJAJu4aoH7J4TsBslyZZraxAOxA8KfRhIDxRcO087-7vWdW64VS90B50AVsanuE7FyhYUmh1h0CHuejQzRHAPurdUhK4qWDhB2H3oLedPEVDtaiArJ-PhnyKYMpugqNGbW4RGqEmaC2DDJacjJ6wNbq_BbtEc537Wb0xWehcMGd91vJFv4LM5qUEDsEviURbFKv3Dowv2Im7aiMqIq7sH73v_Z-Iqy2-Qn8JscPALylADfYkuMqzA7ffh6e_4kQUlVEZNtKrI" />
+                    <div class="absolute top-4 left-4 flex gap-2">
+                        <span
+                            class="bg-gray-900/80 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-white/20">
+                            Client Work
+                        </span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-end">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2 text-slate-900">Survey & Feedback Portal</h3>
+                        <p class="text-slate-600 text-sm max-w-md">A full-stack survey and complaint management system
+                            featuring an AI-powered admin dashboard.</p>
+                    </div>
+                    <button
+                        class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center hover:bg-black transition-colors group-hover:shadow-lg">
+                        <span class="material-icons text-slate-900 group-hover:text-white">north_east</span>
+                    </button>
+                </div>
+            </div>
+            <!-- AI & Art - Horizontal -->
+            <div class="md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex flex-col group">
+                <div class="project-image-container flex-grow relative mb-4">
+                    <img alt="Expense Tracker" class="w-full h-full object-cover rounded-xl"
+                        data-alt="Expense tracker application interface"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEjPhRJfFC_gLoEjuNwuZ16XDjIgYCcDHnEfU5U4tSb3_MoVByHSpVHKoasctmpEiUAULEbO2SSaQsE5iTV5hPNwBOaBbDOD_Z6rWqQzQ1Slj6LDU6DiWV1tdayMf44bQjRb7p4AV5Blu-m4MlGyT1Y7e025SjlkcCvH-MTLOEgqj30Ro782tCFDVILNiylimUGWk8yKOsvMUv0V0wNIvQ6TwIHIWhn1ByW5UF_Zox4nC5yoUmvQJROFYbSwPHGDrknP-vCOhJu88" />
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-2 h-2 rounded-full bg-black"></span>
+                        <span class="text-xs font-medium text-slate-500 uppercase tracking-widest">Utility</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Expense Tracker</h3>
+                </div>
+            </div>
+            <!-- Fluid Dynamics - Vertical -->
+            <div class="md:col-span-4 md:row-span-2 glass-card rounded-2xl p-6 flex flex-col group">
+                <div class="project-image-container flex-grow relative mb-6">
+                    <img alt="YouTube Clone" class="w-full h-full object-cover rounded-xl"
+                        data-alt="YouTube clone application interface"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSr4OwYIEoDzDvbashdDORNsS_9BWSdcYtajSI_zkiPlGKf07LBUPGwC_VaWi_hGlBQdFPnhyWaFkBWEUF48m_TZ8wI4Ys3tVErujmQoxKJEADtgL6FV7ZCyp-bss8TEBJmOcyJy2Q9M6qqpyqfJTsBbO2DeIExiB4DVjiIm1Q4lSmzkun2o7tg-61nLCi_2GlT2oOxPp9RPmdsNg69PKCJ20L9oHmyiuJO168QAMAt96agjc-xrLD6HdUvpjXY0jhSg5EWlgKsHc" />
+                </div>
+                <div>
+                    <span
+                        class="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">
+                        Project
+                    </span>
+                    <h3 class="text-2xl font-bold mb-2 text-slate-900">YouTube Clone</h3>
+                    <p class="text-slate-600 text-sm">A responsive YouTube interface clone built with HTML and CSS.</p>
+                </div>
+            </div>
+            <!-- Apex Fitness - Small -->
+            <div class="md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex flex-col group">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center">
+                        <span class="material-icons text-black">music_note</span>
+                    </div>
+                    <button class="opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-icons text-slate-500">more_horiz</span>
+                    </button>
+                </div>
+                <h3 class="text-xl font-bold mb-1 text-slate-900">Spotify Clone</h3>
+                <p class="text-slate-600 text-sm line-clamp-2">A static Spotify UI clone with pixel-perfect recreation.
+                </p>
+                <div class="mt-auto flex -space-x-2">
+                    <div class="w-6 h-6 rounded-full border-2 border-background-dark bg-slate-800"></div>
+                    <div class="w-6 h-6 rounded-full border-2 border-background-dark bg-gray-400"></div>
+                </div>
+            </div>
+            <!-- Retro Synth - Small -->
+            <div class="md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex flex-col group">
+                <div class="project-image-container flex-grow relative mb-4">
+                    <img alt="Photography Portfolio" class="w-full h-full object-cover rounded-xl"
+                        data-alt="Photography portfolio showcase"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyiOxP_zMmVwYhqOPv8GkswA0okPJHNyyA-2vsmdAXCq4qs1wunN2oKUi3S5sozZp5VBm3sKP_v94-rg3ZkqyG0_1itXXG6jBQODXI4H6iByj4ZfS5HejdM-fguyFSFdl14o5lsqNiu8oEnTRZQ91BcyTcsebo8k9ge6I8USCY9brFuLq4yiS1BC7A4EweAbIpqTBfxhpwkEjBsL9dOTzs-zpUcpjG1rOL_8CQJdIpac0BaSoa2gHmrFNlYHVOBe0wxQAlox4uayU" />
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Photography Portfolio</h3>
+                <p class="text-slate-500 text-xs mt-1 uppercase tracking-widest">Personal Project</p>
+            </div>
+            <!-- More Projects Placeholder -->
+
+        </div>
+        <!-- Footer Call to Action -->
+        <footer class="mt-32 text-center">
+            <h4 class="text-slate-500 text-sm font-bold uppercase tracking-[0.3em] mb-6">READY TO COLLABORATE?</h4>
+            <a class="inline-block group relative" href="#">
+                <span
+                    class="text-5xl md:text-8xl font-bold tracking-tighter hover:text-black transition-colors duration-500">
+                    LET'S BUILD<span class="text-black italic">.</span>
+                </span>
+                <div class="absolute -bottom-2 left-0 w-0 h-1 bg-black group-hover:w-full transition-all duration-700">
+                </div>
+            </a>
+            <div
+                class="mt-20 pt-12 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex space-x-8 text-xs font-bold text-slate-500 tracking-widest uppercase">
+                    <a class="hover:text-black transition-colors" href="https://github.com/theidealshukla">GitHub</a>
+                    <a class="hover:text-black transition-colors"
+                        href="https://linkedin.com/in/theidealshukla">LinkedIn</a>
+                    <a class="hover:text-black transition-colors"
+                        href="https://instagram.com/thenonidealist">Instagram</a>
+                </div>
+                <div class="text-xs text-slate-500 font-medium">
+                    © 2026 Adarsh Shukla. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- Map/Location Indicator (Fixed bottom right) -->
+
+</body>
+
+</html>

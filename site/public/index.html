@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Adarsh Shukla | Visionary</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563eb", // Royal Blue
+                        "accent-cyan": "#0891b2", // Darker Cyan for light mode
+                        "accent-purple": "#9333ea", // Darker Purple
+                        "accent-gold": "#d97706", // Darker Gold
+                        "background-light": "#ffffff",
+                        "background-dark": "#ffffff", // Mapping to white for keeping variable names working if needed, but best to switch
+                        "surface-light": "#f8fafc",
+                        "text-main": "#0f172a", // Slate 900
+                        "text-muted": "#64748b", // Slate 500
+                        "text-on-image": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                        'float-delayed': 'float 8s ease-in-out infinite 4s',
+                        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+                        'marquee': 'marquee 30s linear infinite',
+                        'slow-pan': 'slow-pan 60s linear infinite alternate'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 0.6, transform: 'scale(1)' },
+                            '50%': { opacity: 1, transform: 'scale(1.05)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        'slow-pan': {
+                            '0%': { transform: 'translate(-60%, -50%) scale(1.25)' },
+                            '100%': { transform: 'translate(-40%, -50%) scale(1.25)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .noise-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+            color: transparent;
+        }
+
+        .text-outline-glow {
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+            color: transparent;
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .cinematic-glow {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        /* Ensure text clip works */
+        .bg-clip-text {
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-display overflow-x-hidden min-h-screen selection:bg-primary selection:text-white">
+
+    <!-- Full Page Hero Background -->
+    <div class="fixed inset-0 z-0">
+        <div
+            class="absolute inset-0 bg-[url('assets/images/hero.png')] bg-cover bg-center bg-no-repeat bg-fixed transform scale-105">
+        </div>
+        <div class="absolute inset-0 bg-black/30"></div> <!-- Dark Overlay -->
+        <div class="noise-bg"></div>
+    </div>
+
+    <nav
+        class="fixed top-0 left-0 right-0 z-40 px-6 py-6 flex justify-between items-center w-full max-w-7xl mx-auto transition-all duration-300">
+        <a class="flex items-center gap-2 group cursor-pointer" href="index.html">
+            <span
+                class="font-bold tracking-[0.2em] text-sm uppercase text-white group-hover:text-primary transition-colors">Adarsh.Shukla</span>
+        </a>
+
+        <div
+            class="hidden md:flex items-center gap-1 glass-panel rounded-full px-2 py-1.5 shadow-xl !bg-white/10 !border-white/10">
+            <a class="px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-white/10 rounded-full transition-all text-gray-300 hover:text-white"
+                href="project.html">Work</a>
+            <a class="px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-white/10 rounded-full transition-all text-gray-300 hover:text-white"
+                href="services.html">Services</a>
+            <a class="px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-white/10 rounded-full transition-all text-gray-300 hover:text-white"
+                href="gallery.html">Gallery</a>
+            <a class="px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-white/10 rounded-full transition-all text-gray-300 hover:text-white"
+                href="about.html">About</a>
+        </div>
+
+        <a href="contact.html"
+            class="hidden md:flex items-center gap-3 text-xs font-bold tracking-widest border border-white/20 text-white hover:bg-white hover:text-black rounded-full px-6 py-2.5 transition-all duration-300 group shadow-lg hover:shadow-xl">
+            <span>CONTACT</span>
+            <span
+                class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+        <button class="md:hidden text-white p-2">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </nav>
+
+    <main
+        class="relative z-10 w-full min-h-screen flex flex-col justify-center items-center pt-24 pb-12 overflow-hidden">
+        <div class="container mx-auto px-4 relative flex flex-col items-center">
+
+            <div class="relative w-full flex flex-col items-center justify-center text-center">
+                <h1
+                    class="font-serif text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none text-white/10 select-none z-0 absolute top-1/2 left-1/2 scale-125 pointer-events-none whitespace-nowrap animate-slow-pan">
+                    THINK.INK.CREATE
+                </h1>
+
+                <!-- Main Content Center -->
+                <div class="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto">
+                    <p
+                        class="text-xs uppercase tracking-[0.3em] text-yellow-400 font-bold mb-2 flex items-center justify-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse"></span>
+                        Web Dev . UI/UX . Photography
+                    </p>
+
+
+
+                    <p
+                        class="text-center text-gray-300 text-lg md:text-xl leading-relaxed font-light font-display max-w-2xl mt-4">
+                        Building digital experiences with <span
+                            class="text-white font-bold border-b border-accent-cyan/50 pb-0.5">modern web
+                            technologies</span>
+                        and capturing evocative moments through <span
+                            class="text-white font-bold border-b border-primary/50 pb-0.5">photography</span>.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-30">
+            <a href="project.html"
+                class="group flex items-center gap-3 px-8 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/20 text-white font-medium text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]">
+                <span>Explore Work</span>
+                <span
+                    class="material-symbols-outlined text-lg group-hover:rotate-45 transition-transform duration-500">arrow_outward</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Location Pin -->
+
+</body>
+
+</html>
