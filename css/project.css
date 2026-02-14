@@ -2,6 +2,44 @@
    PROJECT.HTML STYLES
    ================================================================= */
 
+/* Global Responsiveness Fixes */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+}
+
+/* Prevent text overflow */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Specific fix for background text causing scroll */
+.outline-text {
+    white-space: nowrap;
+    max-width: 100vw;
+}
+
+
 /* Noise Texture Overlay */
 .noise-overlay {
     position: fixed;
