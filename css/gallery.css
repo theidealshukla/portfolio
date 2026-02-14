@@ -1,0 +1,106 @@
+/* =================================================================
+   GALLERY.HTML STYLES
+   ================================================================= */
+
+/* Global Responsiveness Fixes */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+}
+
+/* Prevent text from causing horizontal scroll */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Ensure images never overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    cursor: crosshair;
+}
+
+/* Custom Noise Texture Overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 50;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuClWIItmiauJ4_c3JL8EE-WaR_REoDHepH-F6oCHEA4yFvaE5mU1hEF2AI4v5wHmOvYkIQ6z6qDUQ44TukXCRs-vrYngi4bb6xPfbVWvELfpV_t3aSOnSb8BzBYwg-u27Z_nzePxtUXdhWNAN166P35YueUDlNmGtSGc_EKQg3BDyF_jISghwNYE6Mti1ZY96cu_BjHnSXf_0ADg3_P8fOkTOA1P_koctyU2db9fFktY7CV0dD1qM2Ks9LD9_2FkTtd0a7Z4Xr2xs4);
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover Effect for Gallery items */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.gallery-item img {
+    filter: grayscale(100%) brightness(0.9);
+    transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+    transform: scale(1.02);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.1);
+}
+
+.gallery-item:hover {
+    border-color: #000000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+}
