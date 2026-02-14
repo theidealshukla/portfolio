@@ -1,0 +1,20 @@
+# Development files
+stitch-skills/
+queue/
+site/
+
+# Documentation
+DESIGN.md
+SITE.md
+next-prompt.md
+stitch.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
