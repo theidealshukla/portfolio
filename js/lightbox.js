@@ -128,10 +128,20 @@
         document.addEventListener('keydown', handleKeydown);
     }
 
+    // ── Helper: Get Scrollbar Width ─────────────────────────────
+    function getScrollbarWidth() {
+        return window.innerWidth - document.documentElement.clientWidth;
+    }
+
     // ── Open ────────────────────────────────────────────────────
     function openLightbox(index) {
         currentIndex = index;
         if (!lightboxEl) createLightbox();
+
+        const scrollbarWidth = getScrollbarWidth();
+        if (scrollbarWidth > 0) {
+            document.body.style.paddingRight = `${scrollbarWidth}px`;
+        }
 
         lightboxEl.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -144,6 +154,7 @@
         if (!lightboxEl) return;
         lightboxEl.classList.remove('active');
         document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
     }
 
     // ── Navigate ────────────────────────────────────────────────
