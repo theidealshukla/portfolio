@@ -70,6 +70,14 @@
       animation: float 6s ease-in-out infinite 0.5s;
     }
 
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    }
+
     .glass-card {
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(12px);
@@ -158,7 +166,7 @@
           </h1>
           <p class="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed font-body">
             I’m a web developer and AI enthusiast crafting smart, scalable web applications. Based in <span
-              class="text-black font-bold">India</span>, I blend modern technologies like React and Firebase with a
+              class="text-black font-bold">India</span>, I blend modern technologies like React, Python, and SQL with a
             user-first mindset.
           </p>
         </div>
@@ -168,18 +176,10 @@
           class="absolute -inset-1 bg-gradient-to-b from-gray-200 to-transparent rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500">
         </div>
         <div class="relative h-full w-full bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm">
-          <img alt="Stylized portrait of a young creative professional"
-            class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-out grayscale"
-            data-alt="Stylized portrait of a young creative professional"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO864Je0Kd4CYtyX41JpW2qRHeXNohgkF1sztUOgUzm23EGNjguSPdV-pFNE6oiK_0-lXBQ5FGQ1517b9C7WE0VXwE6n63qtBOHRnkGt9Thzm2R72qV7diLnqU9d2wfBSwIys7aP2gehyad3IyxvE1BtdQQ5PqsrVAexHnIkNrtomlF5jyIEOTCPkIvyCFgEc1LHlj3U2Iwru_3bbz9y7vAtZSfZk6U77eyQZTo_LY-Hd0KeRRUTRZF1impxpFCzOJdv8bbeYBWps" />
-          <div
-            class="absolute bottom-4 left-4 bg-white/80 backdrop-blur-md px-4 py-2 rounded-lg border border-gray-200 shadow-sm">
-            <span class="text-xs font-mono text-black tracking-widest uppercase font-bold">Status</span>
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-black animate-pulse"></span>
-              <span class="text-sm font-bold text-black">Pre-final Year Student</span>
-            </div>
-          </div>
+          <img alt="Adarsh Shukla Profile"
+            class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700 ease-out"
+            src="assets/images/profile.jpg" />
+
         </div>
       </div>
     </div>
@@ -193,38 +193,31 @@
               <h2 class="text-4xl font-bold mb-4 text-black">MY <span class="text-black">TOOLKIT</span></h2>
               <p class="text-gray-600 font-body">A curated stack of technologies I use to turn chaos into clarity. Hover
                 to explore.</p>
-              <div class="mt-8 flex gap-4">
-                <div class="text-center">
-                  <span class="block text-3xl font-bold text-black">4+</span>
-                  <span class="text-xs text-gray-500 uppercase tracking-widest font-semibold">Years</span>
-                </div>
-                <div class="w-px h-10 bg-gray-200"></div>
-                <div class="text-center">
-                  <span class="block text-3xl font-bold text-black">50+</span>
+              <div class="mt-8">
+                <div class="text-left">
+                  <span class="block text-3xl font-bold text-black">10+</span>
                   <span class="text-xs text-gray-500 uppercase tracking-widest font-semibold">Projects</span>
                 </div>
               </div>
             </div>
             <div class="md:w-2/3 flex flex-wrap justify-end gap-3 md:gap-4">
               <span
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-1 shadow-sm">React.js</span>
+                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-1 shadow-sm uppercase tracking-wider">React</span>
               <span
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-2 shadow-sm">Tailwind
-                CSS</span>
+                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-2 shadow-sm uppercase tracking-wider">Python</span>
               <span
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-3 shadow-sm">Firebase</span>
+                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-3 shadow-sm uppercase tracking-wider">SQL</span>
               <span
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-1 shadow-sm">Python</span>
+                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-1 shadow-sm uppercase tracking-wider">Gen
+                AI</span>
               <span
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-2 shadow-sm">SQL</span>
+                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-2 shadow-sm uppercase tracking-wider">Machine
+                Learning</span>
               <span
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-3 shadow-sm">Claude
-                3 API</span>
+                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-3 shadow-sm uppercase tracking-wider">Deep
+                Learning</span>
               <span
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-1 shadow-sm">Bootstrap</span>
-              <span
-                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-2 shadow-sm">Local
-                Storage</span>
+                class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-800 hover:border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base font-medium float-delayed-1 shadow-sm uppercase tracking-wider">NLP</span>
             </div>
           </div>
         </div>
@@ -254,7 +247,7 @@
             <div
               class="glass-card rounded-xl p-8 hover:bg-white transition duration-300 hover:shadow-lg border border-gray-100">
               <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                <h3 class="text-2xl font-bold text-black">Pre-final Year Student</h3>
+                <h3 class="text-2xl font-bold text-black">Computer Science Engineering</h3>
                 <span
                   class="text-black font-mono text-sm bg-gray-100 px-3 py-1 rounded-full border border-gray-200 font-bold">Present</span>
               </div>

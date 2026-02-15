@@ -20,6 +20,15 @@
     <script src="js/tailwind-minimalist.config.js"></script>
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/project.css" />
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
 
 <body class="bg-background-light font-display text-slate-900 selection:bg-black selection:text-white">
@@ -99,111 +108,241 @@
                 All Projects<span class="text-black">.</span>
             </h1>
             <!-- Filter System -->
-            <div class="flex flex-wrap items-center gap-3">
-                <button class="active-tab text-white px-8 py-3 rounded-full text-sm font-semibold transition-all">
+            <!-- Filter System -->
+            <div class="flex flex-wrap items-center gap-3 filter-buttons">
+                <button data-filter="all"
+                    class="filter-btn active-tab text-white px-8 py-3 rounded-full text-sm font-semibold transition-all">
                     All Projects
                 </button>
-                <button
-                    class="bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
+                <button data-filter="Academic"
+                    class="filter-btn bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
                     Academic
                 </button>
-                <button
-                    class="bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
-                    Client Work
+                <button data-filter="Freelance"
+                    class="filter-btn bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
+                    Freelance
                 </button>
-                <button
-                    class="bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
-                    Experiments
+                <button data-filter="Experimental"
+                    class="filter-btn bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
+                    Experimental
                 </button>
             </div>
         </header>
         <!-- Bento Grid -->
         <div class="grid grid-cols-1 md:grid-cols-12 auto-rows-[280px] gap-6">
-            <!-- Neon Tokyo - Large Feature -->
-            <div class="md:col-span-8 md:row-span-2 glass-card rounded-2xl p-6 flex flex-col group">
-                <div class="project-image-container flex-grow relative mb-6">
-                    <img alt="Neon Tokyo Project" class="w-full h-full object-cover rounded-xl"
-                        data-alt="Futuristic neon lit Tokyo cityscape at night"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpZ7CJAJu4aoH7J4TsBslyZZraxAOxA8KfRhIDxRcO087-7vWdW64VS90B50AVsanuE7FyhYUmh1h0CHuejQzRHAPurdUhK4qWDhB2H3oLedPEVDtaiArJ-PhnyKYMpugqNGbW4RGqEmaC2DDJacjJ6wNbq_BbtEc537Wb0xWehcMGd91vJFv4LM5qUEDsEviURbFKv3Dowv2Im7aiMqIq7sH73v_Z-Iqy2-Qn8JscPALylADfYkuMqzA7ffh6e_4kQUlVEZNtKrI" />
-                    <div class="absolute top-4 left-4 flex gap-2">
-                        <span
-                            class="bg-gray-900/80 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-white/20">
-                            Client Work
-                        </span>
-                    </div>
+            <!-- Project 1: Survey-Feedback-Portal (Academic) -->
+            <div data-category="Academic"
+                class="project-card md:col-span-8 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-6 group relative overflow-hidden transition-all duration-500">
+                <div class="w-1/3 h-full rounded-xl overflow-hidden hidden md:block">
+                    <img alt="Survey Portal Dashboard"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000" />
                 </div>
-                <div class="flex justify-between items-end">
-                    <div>
-                        <h3 class="text-3xl font-bold mb-2 text-slate-900">Survey & Feedback Portal</h3>
-                        <p class="text-slate-600 text-sm max-w-md">A full-stack survey and complaint management system
-                            featuring an AI-powered admin dashboard.</p>
-                    </div>
-                    <button
-                        class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center hover:bg-black transition-colors group-hover:shadow-lg">
-                        <span class="material-icons text-slate-900 group-hover:text-white">north_east</span>
-                    </button>
-                </div>
-            </div>
-            <!-- AI & Art - Horizontal -->
-            <div class="md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex flex-col group">
-                <div class="project-image-container flex-grow relative mb-4">
-                    <img alt="Expense Tracker" class="w-full h-full object-cover rounded-xl"
-                        data-alt="Expense tracker application interface"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEjPhRJfFC_gLoEjuNwuZ16XDjIgYCcDHnEfU5U4tSb3_MoVByHSpVHKoasctmpEiUAULEbO2SSaQsE5iTV5hPNwBOaBbDOD_Z6rWqQzQ1Slj6LDU6DiWV1tdayMf44bQjRb7p4AV5Blu-m4MlGyT1Y7e025SjlkcCvH-MTLOEgqj30Ro782tCFDVILNiylimUGWk8yKOsvMUv0V0wNIvQ6TwIHIWhn1ByW5UF_Zox4nC5yoUmvQJROFYbSwPHGDrknP-vCOhJu88" />
-                </div>
-                <div>
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="w-2 h-2 rounded-full bg-black"></span>
-                        <span class="text-xs font-medium text-slate-500 uppercase tracking-widest">Utility</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900">Expense Tracker</h3>
-                </div>
-            </div>
-            <!-- Fluid Dynamics - Vertical -->
-            <div class="md:col-span-4 md:row-span-2 glass-card rounded-2xl p-6 flex flex-col group">
-                <div class="project-image-container flex-grow relative mb-6">
-                    <img alt="YouTube Clone" class="w-full h-full object-cover rounded-xl"
-                        data-alt="YouTube clone application interface"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSr4OwYIEoDzDvbashdDORNsS_9BWSdcYtajSI_zkiPlGKf07LBUPGwC_VaWi_hGlBQdFPnhyWaFkBWEUF48m_TZ8wI4Ys3tVErujmQoxKJEADtgL6FV7ZCyp-bss8TEBJmOcyJy2Q9M6qqpyqfJTsBbO2DeIExiB4DVjiIm1Q4lSmzkun2o7tg-61nLCi_2GlT2oOxPp9RPmdsNg69PKCJ20L9oHmyiuJO168QAMAt96agjc-xrLD6HdUvpjXY0jhSg5EWlgKsHc" />
-                </div>
-                <div>
+                <div class="flex-grow">
                     <span
-                        class="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">
-                        Project
+                        class="bg-black/80 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-white/20 inline-block mb-2">
+                        Academic
                     </span>
-                    <h3 class="text-2xl font-bold mb-2 text-slate-900">YouTube Clone</h3>
-                    <p class="text-slate-600 text-sm">A responsive YouTube interface clone built with HTML and CSS.</p>
+                    <h3 class="text-2xl font-bold mb-2 text-slate-900">Survey & Feedback Portal</h3>
+                    <p class="text-slate-600 text-sm max-w-md mb-4">AI-powered feedback collection and NPS analysis
+                        system with real-time insight generation.</p>
+                    <a href="https://survey-feedback-portal.netlify.app/admin.html" target="_blank"
+                        class="flex items-center gap-2 text-black font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
+                        View Live <span class="material-icons text-xs">arrow_forward</span>
+                    </a>
                 </div>
             </div>
-            <!-- Apex Fitness - Small -->
-            <div class="md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex flex-col group">
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center">
-                        <span class="material-icons text-black">music_note</span>
+
+            <!-- Project 3: Freshmart (Freelance) -->
+            <div data-category="Freelance"
+                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
+                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+                    <img alt="Freshmart Grocery"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1000" />
+                </div>
+                <div class="flex-grow">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Freshmart</h3>
+                    <a href="https://theidealshukla.github.io/freshmart/" target="_blank"
+                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
+                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: ColdMailBot (Experimental) -->
+            <div data-category="Experimental"
+                class="project-card md:col-span-8 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-6 group relative overflow-hidden transition-all duration-500">
+                <div class="w-1/3 h-full rounded-xl overflow-hidden hidden md:block">
+                    <img alt="ColdMailBot Automation"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=2000" />
+                </div>
+                <div class="flex-grow">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 block">Experimental</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">ColdMailBot</h3>
+                    <p class="text-slate-600 text-sm max-w-sm mb-4">Automated Email Campaign System. Personalized cold
+                        emails
+                        for your internship hustle at scale.</p>
+                    <a href="https://github.com/theidealshukla/ColdMailBot" target="_blank"
+                        class="flex items-center gap-2 text-black font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
+                        View Code <span class="material-icons text-xs">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 7: Medicare (Freelance) -->
+            <div data-category="Freelance"
+                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
+                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+                    <img alt="Medicare Hospital"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000" />
+                </div>
+                <div class="flex-grow">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Medicare</h3>
+                    <a href="https://medicare-online.netlify.app/" target="_blank"
+                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
+                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: ChatureBhature (Freelance) -->
+            <div data-category="Freelance"
+                class="project-card md:col-span-8 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-6 group relative overflow-hidden transition-all duration-500">
+                <div class="flex-grow">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 block">Freelance</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Chature Bhature</h3>
+                    <p class="text-slate-600 text-sm max-w-sm mb-4">Digital presence for a Punjabi Chole Bhature
+                        restaurant.
+                        Inviting and minimal design.</p>
+                    <a href="https://chaturebhature.netlify.app/" target="_blank"
+                        class="flex items-center gap-2 text-black font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
+                        View Live <span class="material-icons text-xs">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="w-1/3 h-full rounded-xl overflow-hidden hidden md:block">
+                    <img alt="Chature Bhature Restaurant"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://images.unsplash.com/photo-1626500155537-883a9965d1d6?auto=format&fit=crop&q=80&w=2000" />
+                </div>
+            </div>
+
+            <!-- Project 6: LuminaDerm (Freelance) -->
+            <div data-category="Freelance"
+                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
+                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+                    <img alt="LuminaDerm Clinic"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1000" />
+                </div>
+                <div class="flex-grow">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">LuminaDerm</h3>
+                    <a href="https://dermaclinic-in.netlify.app/#/" target="_blank"
+                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
+                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: Dakshin Aura (Freelance) -->
+            <div data-category="Freelance"
+                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
+                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+                    <img alt="Dakshin Aura"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=1000" />
+                </div>
+                <div class="flex-grow">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Dakshin Aura</h3>
+                    <a href="https://github.com/theidealshukla" target="_blank"
+                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
+                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 8: Dantkriti (Freelance) -->
+            <div data-category="Freelance"
+                class="project-card md:col-span-8 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-6 group relative overflow-hidden transition-all duration-500">
+                <div class="flex-grow">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 block">Freelance</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Dantkriti</h3>
+                    <p class="text-slate-600 text-sm max-w-sm mb-4">Orofacial Aesthetic Centre reflecting a clean,
+                        professional environment.</p>
+                    <a href="https://theidealshukla.github.io/DANTKRITI-Orofacial-Aesthetic-Centre-/" target="_blank"
+                        class="flex items-center gap-2 text-black font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
+                        View Live <span class="material-icons text-xs">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="w-1/3 h-full rounded-xl overflow-hidden hidden md:block">
+                    <img alt="Dantkriti Aesthetic Centre"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=2000" />
+                </div>
+            </div>
+
+            <!-- Project 9: Pachamama (Freelance) -->
+            <div data-category="Freelance"
+                class="project-card md:col-span-12 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-8 group relative overflow-hidden transition-all duration-500">
+                <div class="flex-grow">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 block">Freelance</span>
+                    <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Pachamama</h3>
+                    <p class="text-slate-600 text-lg max-w-xl mb-6">Minimalist and fresh restaurant website for
+                        Pachamama
+                        Bhopal, a pure vegetarian destination focusing on nature and authentic taste.</p>
+                    <a href="https://pachamama-bhopal-vegetarian-restaur.vercel.app/contact" target="_blank"
+                        class="flex items-center gap-2 text-black font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
+                        View Live <span class="material-icons text-xs">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="w-1/2 h-full rounded-2xl overflow-hidden hidden lg:block">
+                    <img alt="Pachamama Vegetarian Restaurant"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=2000" />
+                </div>
+            </div>
+
+            <!-- Project 10: Thar 3D (Experimental) -->
+            <div data-category="Experimental"
+                class="project-card md:col-span-12 md:row-span-1 glass-card rounded-2xl p-8 flex items-center justify-between group relative overflow-hidden bg-black text-white transition-all duration-500">
+                <div class="absolute inset-0 opacity-40">
+                    <img alt="Thar 3D Render"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                        src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=2000" />
+                </div>
+                <div class="relative z-10 w-full flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div>
+                        <span
+                            class="text-[10px] font-bold text-white/50 uppercase tracking-[0.3em] mb-2 block font-mono">Experimental
+                            / 3D</span>
+                        <h3 class="text-4xl md:text-5xl font-bold font-display uppercase italic tracking-tighter">Thar
+                            3D Render</h3>
+                        <p class="text-white/70 text-sm max-w-sm mt-2">Immersive 3D landing page showcasing automotive
+                            rendering and web animation.</p>
                     </div>
-                    <button class="opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="material-icons text-slate-500">more_horiz</span>
-                    </button>
-                </div>
-                <h3 class="text-xl font-bold mb-1 text-slate-900">Spotify Clone</h3>
-                <p class="text-slate-600 text-sm line-clamp-2">A static Spotify UI clone with pixel-perfect recreation.
-                </p>
-                <div class="mt-auto flex -space-x-2">
-                    <div class="w-6 h-6 rounded-full border-2 border-background-dark bg-slate-800"></div>
-                    <div class="w-6 h-6 rounded-full border-2 border-background-dark bg-gray-400"></div>
+                    <a href="https://theidealshukla.github.io/3d-render-thar/" target="_blank"
+                        class="px-10 py-4 bg-white text-black rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white/90 transition-all flex items-center gap-4 group-hover:gap-6 shadow-2xl">
+                        Experience 3D <span class="material-icons text-sm">rocket_launch</span>
+                    </a>
                 </div>
             </div>
-            <!-- Retro Synth - Small -->
-            <div class="md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex flex-col group">
-                <div class="project-image-container flex-grow relative mb-4">
-                    <img alt="Photography Portfolio" class="w-full h-full object-cover rounded-xl"
-                        data-alt="Photography portfolio showcase"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyiOxP_zMmVwYhqOPv8GkswA0okPJHNyyA-2vsmdAXCq4qs1wunN2oKUi3S5sozZp5VBm3sKP_v94-rg3ZkqyG0_1itXXG6jBQODXI4H6iByj4ZfS5HejdM-fguyFSFdl14o5lsqNiu8oEnTRZQ91BcyTcsebo8k9ge6I8USCY9brFuLq4yiS1BC7A4EweAbIpqTBfxhpwkEjBsL9dOTzs-zpUcpjG1rOL_8CQJdIpac0BaSoa2gHmrFNlYHVOBe0wxQAlox4uayU" />
-                </div>
-                <h3 class="text-xl font-bold text-slate-900">Photography Portfolio</h3>
-                <p class="text-slate-500 text-xs mt-1 uppercase tracking-widest">Personal Project</p>
-            </div>
-            <!-- More Projects Placeholder -->
+
+        </div>
+        <!-- More Projects Placeholder -->
 
         </div>
         <!-- Footer Call to Action -->
@@ -258,6 +397,42 @@
 
         mobileMenuBtn.addEventListener('click', toggleMenu);
         closeMenuBtn.addEventListener('click', toggleMenu);
+
+        // Project Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active-tab', 'text-white');
+                    b.classList.add('bg-gray-100', 'text-slate-500');
+                });
+
+                // Add active class to clicked button
+                btn.classList.add('active-tab', 'text-white');
+                btn.classList.remove('bg-gray-100', 'text-slate-500');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 500);
+                    }
+                });
+            });
+        });
     </script>
 </body>
 
