@@ -81,55 +81,29 @@
 
 <body
   class="bg-background-light text-gray-900 font-display min-h-screen relative overflow-x-hidden selection:bg-black selection:text-white">
-  <nav
-    class="fixed top-0 left-0 right-0 z-40 px-6 py-2 md:py-6 flex justify-between items-center w-full max-w-7xl mx-auto bg-white/70 backdrop-blur-lg border-b border-gray-200/50 md:bg-transparent md:backdrop-blur-none md:border-none transition-all">
-    <a class="flex items-center gap-2 group cursor-pointer" href="index.html">
-      <span class="font-bold tracking-widest text-sm md:text-sm uppercase text-black">Adarsh.Shukla</span>
-    </a>
-    <div
-      class="hidden md:flex items-center gap-1 bg-white/70 backdrop-blur-md rounded-full px-2 py-1.5 border border-gray-200 shadow-sm">
-      <a class="px-5 py-2 text-sm font-medium hover:bg-gray-100/50 rounded-full transition-colors text-gray-500 hover:text-black"
-        href="project.html">Work</a>
-      <a class="px-5 py-2 text-sm font-medium hover:bg-gray-100/50 rounded-full transition-colors text-gray-500 hover:text-black"
-        href="services.html">Services</a>
-      <a class="px-5 py-2 text-sm font-medium hover:bg-gray-100/50 rounded-full transition-colors text-gray-500 hover:text-black"
-        href="gallery.html">Gallery</a>
-      <a class="px-5 py-2 text-sm font-medium hover:bg-gray-100/50 rounded-full transition-colors text-black font-bold"
-        href="about.html">About</a>
-    </div>
-    <a href="contact.html"
-      class="hidden md:flex items-center gap-2 text-sm font-bold border-2 border-black text-black hover:bg-black hover:text-white rounded-full px-5 py-2 transition-all duration-300 group shadow-lg hover:shadow-xl">
-      <span>Contact</span>
-      <span
-        class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
-    </a>
-    <button data-mobile-menu-button class="md:hidden text-black p-4">
-      <span data-menu-icon class="material-symbols-outlined text-xl">menu</span>
-    </button>
-  </nav>
+  <!-- Top Left Brand Name -->
+  <a href="index.html"
+    class="fixed top-9 left-6 md:left-12 z-50 text-[10px] md:text-xs tracking-[0.2em] font-bold uppercase text-black hover:text-black/60 transition-colors mix-blend-difference decoration-none">
+    Adarsh.Shukla
+  </a>
 
-  <!-- Mobile Menu -->
-  <div data-mobile-menu class="hidden fixed inset-0 z-50 bg-white md:hidden flex-col">
-    <div class="flex justify-between items-center px-6 py-6 border-b border-gray-200">
-      <span class="font-bold tracking-widest text-xl uppercase text-slate-900">Adarsh.Shukla</span>
-      <button data-mobile-menu-button class="text-slate-900 p-4">
-        <span data-menu-icon class="material-symbols-outlined text-4xl">close</span>
-      </button>
-    </div>
-    <nav class="flex-1 flex flex-col justify-center items-center gap-8 px-6">
-      <a class="text-3xl font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900 transition-colors"
+  <!-- Floating Navigation Pill -->
+  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-max max-w-[90vw]">
+    <div class="glass px-6 py-3 rounded-full flex items-center gap-4 md:gap-8 shadow-sm">
+      <a class="text-[10px] md:text-xs tracking-[0.2em] font-bold uppercase hover:text-black/60 transition-colors text-black"
+        href="index.html">Home</a>
+      <a class="text-[10px] md:text-xs tracking-[0.2em] font-bold uppercase hover:text-black/60 transition-colors text-black"
         href="project.html">Work</a>
-      <a class="text-3xl font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900 transition-colors"
+      <a class="text-[10px] md:text-xs tracking-[0.2em] font-bold uppercase hover:text-black/60 transition-colors text-black"
         href="services.html">Services</a>
-      <a class="text-3xl font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900 transition-colors"
+      <a class="text-[10px] md:text-xs tracking-[0.2em] font-bold uppercase hover:text-black/60 transition-colors text-black"
         href="gallery.html">Gallery</a>
-      <a class="text-3xl font-bold uppercase tracking-wider text-black transition-colors" href="about.html">About</a>
-      <a href="contact.html"
-        class="mt-4 text-xl font-bold border-2 border-black text-black hover:bg-black hover:text-white rounded-full px-10 py-4 transition-all duration-300">
-        Contact
-      </a>
-    </nav>
-  </div>
+      <a class="text-[10px] md:text-xs tracking-[0.2em] font-bold uppercase hover:text-black/60 transition-colors text-black"
+        href="about.html">About</a>
+      <a class="text-[10px] md:text-xs tracking-[0.2em] font-bold uppercase hover:text-black/60 transition-colors text-black"
+        href="contact.html">Contact</a>
+    </div>
+  </nav>
   <main class="relative z-10 container mx-auto px-4 md:px-8 pt-32 pb-20 max-w-7xl">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
       <div class="lg:col-span-8 relative group">
