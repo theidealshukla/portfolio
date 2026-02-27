@@ -1,42 +1,44 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>All Projects | Portfolio Bento</title>
+    <title>Projects | Adarsh Shukla — Creative Developer</title>
+    <meta name="description"
+        content="Explore the portfolio of Adarsh Shukla — a showcase of freelance, academic, and experimental web projects featuring modern design and cutting-edge technology." />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
+
     <!-- Tailwind Configuration -->
     <script src="js/tailwind-minimalist.config.js"></script>
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/project.css" />
-    <style>
-        .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-        }
-    </style>
 </head>
 
-<body class="bg-background-light font-display text-slate-900 selection:bg-black selection:text-white">
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+
     <!-- Grain Texture -->
     <div class="noise-overlay"></div>
-    <!-- Navigation -->
-    <!-- Floating Navigation Pill -->
-    <!-- Top Left Brand Name -->
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  NAVIGATION                                                    -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
     <!-- Desktop Brand Name -->
     <a href="index.html"
         class="hidden md:block fixed top-8 left-6 md:left-12 z-50 text-xl font-['Syne'] font-extrabold uppercase text-black hover:text-black/60 transition-colors decoration-none tracking-tighter">
@@ -97,307 +99,429 @@
                 href="contact.html">Contact</a>
         </nav>
     </div>
-    <main class="relative pt-32 pb-24 px-6 max-w-7xl mx-auto overflow-hidden">
-        <!-- Header Section -->
-        <header class="mb-16 relative">
-            <h2
-                class="absolute -top-10 -left-4 text-6xl md:text-8xl font-bold outline-text uppercase tracking-tighter pointer-events-none select-none opacity-50">
-                Portfolio
-            </h2>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8">
-                All Projects<span class="text-black">.</span>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  CINEMATIC HERO SECTION                                        -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <section class="projects-hero">
+        <div class="hero-counter parallax-text" id="heroCounter">12</div>
+
+        <div class="reveal-up">
+            <p class="hero-subtitle">Selected Works & Experiments</p>
+            <h1 class="hero-title">
+                Project<br />
+                <span class="accent">Archive</span>
             </h1>
-            <!-- Filter System -->
-            <!-- Filter System -->
-            <div class="flex flex-wrap items-center gap-3 filter-buttons">
-                <button data-filter="all"
-                    class="filter-btn active-tab text-white px-8 py-3 rounded-full text-sm font-semibold transition-all">
-                    All Projects
-                </button>
-                <button data-filter="Academic"
-                    class="filter-btn bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
-                    Academic
-                </button>
-                <button data-filter="Freelance"
-                    class="filter-btn bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
-                    Freelance
-                </button>
-                <button data-filter="Experimental"
-                    class="filter-btn bg-gray-100 hover:bg-gray-200 text-slate-500 hover:text-slate-900 px-8 py-3 rounded-full text-sm font-semibold transition-all">
-                    Experimental
-                </button>
-            </div>
-        </header>
-        <!-- Bento Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-12 auto-rows-[280px] gap-6">
+            <div class="hero-line"></div>
+        </div>
+    </section>
 
 
-            <!-- Project: Luxestates (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
-                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
-                    <img alt="Luxestates"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000" />
-                </div>
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
-                    <h3 class="text-lg font-bold text-slate-900 mb-1">Luxestates</h3>
-                    <p class="text-slate-600 text-[10px] mb-2 leading-tight">realestate website for brokers</p>
-                    <a href="https://lux-estates.netlify.app/" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  STICKY FILTER BAR                                             -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
 
-            <!-- Project 3: Freshmart (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
-                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
-                    <img alt="Freshmart Grocery"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1000" />
-                </div>
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
-                    <h3 class="text-lg font-bold text-slate-900 mb-1">Freshmart</h3>
-                    <a href="https://theidealshukla.github.io/freshmart/" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
+    <div class="filter-bar" id="filterBar">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+                All<span class="filter-count">12</span>
+            </button>
+            <button class="filter-btn" data-filter="Freelance">
+                Freelance<span class="filter-count">10</span>
+            </button>
+            <button class="filter-btn" data-filter="Experimental">
+                Experimental<span class="filter-count">1</span>
+            </button>
+            <button class="filter-btn" data-filter="Academic">
+                Academic<span class="filter-count">1</span>
+            </button>
+        </div>
+    </div>
 
 
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  PROJECTS GRID — IMMERSIVE 3D CARDS                            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
 
-            <!-- Project 7: Medicare (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
-                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
-                    <img alt="Medicare Hospital"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000" />
-                </div>
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
-                    <h3 class="text-lg font-bold text-slate-900 mb-1">Medicare</h3>
-                    <a href="https://medicare-online.netlify.app/" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
+    <section class="projects-grid" id="projectsGrid">
 
-            <!-- Project 4: ChatureBhature (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-8 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-6 group relative overflow-hidden transition-all duration-500">
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 block">Freelance</span>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Chature Bhature</h3>
-                    <p class="text-slate-600 text-sm max-w-sm mb-4">Digital presence for a Punjabi Chole Bhature
-                        restaurant.
-                        Inviting and minimal design.</p>
-                    <a href="https://chaturebhature.netlify.app/" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-xs">arrow_forward</span>
-                    </a>
-                </div>
-                <div class="w-1/3 h-full rounded-xl overflow-hidden hidden md:block">
-                    <img alt="Chature Bhature Restaurant"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1626500155537-883a9965d1d6?auto=format&fit=crop&q=80&w=2000" />
-                </div>
-            </div>
-
-            <!-- Project 6: LuminaDerm (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
-                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
-                    <img alt="LuminaDerm Clinic"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1000" />
-                </div>
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
-                    <h3 class="text-lg font-bold text-slate-900 mb-1">LuminaDerm</h3>
-                    <a href="https://dermaclinic-in.netlify.app/#/" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Project 5: Dakshin Aura (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
-                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
-                    <img alt="Dakshin Aura"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=1000" />
-                </div>
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
-                    <h3 class="text-lg font-bold text-slate-900 mb-1">Dakshin Aura</h3>
-                    <a href="https://theidealshukla.github.io/dakshin-aura/" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Project 8: Dantkriti (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-8 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-6 group relative overflow-hidden transition-all duration-500">
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 block">Freelance</span>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Dantkriti</h3>
-                    <p class="text-slate-600 text-sm max-w-sm mb-4">Orofacial Aesthetic Centre reflecting a clean,
-                        professional environment.</p>
-                    <a href="https://theidealshukla.github.io/DANTKRITI-Orofacial-Aesthetic-Centre-/" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-xs">arrow_forward</span>
-                    </a>
-                </div>
-                <div class="w-1/3 h-full rounded-xl overflow-hidden hidden md:block">
-                    <img alt="Dantkriti Aesthetic Centre"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=2000" />
-                </div>
-            </div>
-
-            <!-- Project 9: Pachamama (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-12 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-8 group relative overflow-hidden transition-all duration-500">
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 block">Freelance</span>
-                    <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Pachamama</h3>
-                    <p class="text-slate-600 text-lg max-w-xl mb-6">Minimalist and fresh restaurant website for
-                        Pachamama
-                        Bhopal, a pure vegetarian destination focusing on nature and authentic taste.</p>
-                    <a href="https://theidealshukla.github.io/pachamama/index.html" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-xs">arrow_forward</span>
-                    </a>
-                </div>
-                <div class="w-1/2 h-full rounded-2xl overflow-hidden hidden lg:block">
-                    <img alt="Pachamama Vegetarian Restaurant"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=2000" />
-                </div>
-            </div>
-
-            <!-- Project 11: FitFusion Gym (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-8 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-6 group relative overflow-hidden transition-all duration-500">
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 block">Freelance</span>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">FitFusion Gym</h3>
-                    <p class="text-slate-600 text-sm max-w-sm mb-4">A dynamic and high-energy website for fitness
-                        enthusiasts, featuring engaging layouts and bold aesthetics.</p>
-                    <a href="https://fitfusiongym.netlify.app/" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-xs">arrow_forward</span>
-                    </a>
-                </div>
-                <div class="w-1/3 h-full rounded-xl overflow-hidden hidden md:block">
-                    <img alt="FitFusion Gym"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2000" />
-                </div>
-            </div>
-
-            <!-- Project 12: Modular Kitchen (Freelance) -->
-            <div data-category="Freelance"
-                class="project-card md:col-span-4 md:row-span-1 glass-card rounded-2xl p-6 flex items-center gap-4 group relative overflow-hidden transition-all duration-500">
-                <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
-                    <img alt="Modular Kitchen"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1000" />
-                </div>
-                <div class="flex-grow">
-                    <span
-                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 block">Freelance</span>
-                    <h3 class="text-lg font-bold text-slate-900 mb-1">Modular Kitchen</h3>
-                    <p class="text-slate-600 text-[10px] mb-2 leading-tight">Sleek portfolio showcasing premium custom
-                        modular kitchen designs.</p>
-                    <a href="https://modularkitchnes.netlify.app/#portfolio" target="_blank"
-                        class="flex items-center gap-2 text-black font-bold text-[10px] uppercase tracking-widest hover:gap-3 transition-all">
-                        View Live <span class="material-icons text-[10px]">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Project 10: Thar 3D (Experimental) -->
-            <div data-category="Experimental"
-                class="project-card md:col-span-12 md:row-span-1 glass-card rounded-2xl p-8 flex items-center justify-between group relative overflow-hidden bg-black text-white transition-all duration-500">
-                <div class="absolute inset-0 opacity-40">
-                    <img alt="Thar 3D Render"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-                        src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=2000" />
-                </div>
-                <div class="relative z-10 w-full flex flex-col md:flex-row md:items-center justify-between gap-6">
-                    <div>
-                        <span
-                            class="text-[10px] font-bold text-white/50 uppercase tracking-[0.3em] mb-2 block font-mono">Experimental
-                            / 3D</span>
-                        <h3 class="text-4xl md:text-5xl font-bold font-display uppercase italic tracking-tighter">Thar
-                            3D Render</h3>
-                        <p class="text-white/70 text-sm max-w-sm mt-2">Immersive 3D landing page showcasing automotive
-                            rendering and web animation.</p>
+        <!-- ─── FEATURED: Pachamama ─── -->
+        <a href="https://theidealshukla.github.io/pachamama/index.html" target="_blank" class="project-card featured"
+            data-category="Freelance" data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">✦ Featured</span>
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=2000"
+                        alt="Pachamama Vegetarian Restaurant" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
                     </div>
-                    <a href="https://theidealshukla.github.io/3d-render-thar/" target="_blank"
-                        class="px-10 py-4 bg-white text-black rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white/90 transition-all flex items-center gap-4 group-hover:gap-6 shadow-2xl">
-                        Experience 3D <span class="material-icons text-sm">rocket_launch</span>
-                    </a>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">01 — FREELANCE</div>
+                    <h3 class="card-title">Pachamama</h3>
+                    <p class="card-description">Minimalist and fresh restaurant website for Pachamama Bhopal, a pure
+                        vegetarian destination focusing on nature and authentic taste. Clean design with earthy
+                        tones.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">UI Design</span>
+                        <span class="card-tag">HTML/CSS</span>
+                        <span class="card-tag">Restaurant</span>
+                    </div>
                 </div>
             </div>
+        </a>
 
-        </div>
-        <!-- More Projects Placeholder -->
-
-        </div>
-        <!-- Footer Call to Action -->
-        <footer class="mt-32 text-center">
-            <h4 class="text-slate-500 text-sm font-bold uppercase tracking-[0.3em] mb-6">READY TO COLLABORATE?</h4>
-            <a class="inline-block group relative" href="#">
-                <span
-                    class="text-5xl md:text-8xl font-bold tracking-tighter hover:text-black transition-colors duration-500">
-                    LET'S BUILD<span class="text-black italic">.</span>
-                </span>
-                <div class="absolute -bottom-2 left-0 w-0 h-1 bg-black group-hover:w-full transition-all duration-700">
+        <!-- ─── Chature Bhature ─── -->
+        <a href="https://chaturebhature.netlify.app/" target="_blank" class="project-card" data-category="Freelance"
+            data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">Freelance</span>
+                    <img src="https://images.unsplash.com/photo-1626500155537-883a9965d1d6?auto=format&fit=crop&q=80&w=2000"
+                        alt="Chature Bhature Restaurant" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
                 </div>
-            </a>
-            <div
-                class="mt-20 pt-12 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex space-x-8 text-xs font-bold text-slate-500 tracking-widest uppercase">
-                    <a class="hover:text-black transition-colors" href="https://github.com/theidealshukla">GitHub</a>
-                    <a class="hover:text-black transition-colors"
-                        href="https://linkedin.com/in/theidealshukla">LinkedIn</a>
-                    <a class="hover:text-black transition-colors"
-                        href="https://instagram.com/thenonidealist">Instagram</a>
-                </div>
-                <div class="text-xs text-slate-500 font-medium">
-                    © 2026 Adarsh Shukla. All rights reserved.
+                <div class="card-content">
+                    <div class="card-number">02 — FREELANCE</div>
+                    <h3 class="card-title">Chature Bhature</h3>
+                    <p class="card-description">Digital presence for a Punjabi Chole Bhature restaurant. Inviting and
+                        minimal design that captures the warmth of the brand.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Branding</span>
+                        <span class="card-tag">Netlify</span>
+                        <span class="card-tag">Food</span>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </main>
-    <!-- Map/Location Indicator (Fixed bottom right) -->
+        </a>
+
+        <!-- ─── FitFusion Gym ─── -->
+        <a href="https://fitfusiongym.netlify.app/" target="_blank" class="project-card" data-category="Freelance"
+            data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">Freelance</span>
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2000"
+                        alt="FitFusion Gym" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">03 — FREELANCE</div>
+                    <h3 class="card-title">FitFusion Gym</h3>
+                    <p class="card-description">A dynamic and high-energy website for fitness enthusiasts, featuring
+                        engaging layouts and bold aesthetics.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">React</span>
+                        <span class="card-tag">Animations</span>
+                        <span class="card-tag">Fitness</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- ─── THAR 3D — DARK CARD (Wide) ─── -->
+        <a href="https://theidealshukla.github.io/3d-render-thar/" target="_blank" class="project-card wide dark-card"
+            data-category="Experimental" data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">✦ Experimental / 3D</span>
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=2000"
+                        alt="Thar 3D Render" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">04 — EXPERIMENTAL</div>
+                    <h3 class="card-title">Thar 3D Render</h3>
+                    <p class="card-description">Immersive 3D landing page showcasing automotive rendering and cinematic
+                        web animation with WebGL.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Three.js</span>
+                        <span class="card-tag">WebGL</span>
+                        <span class="card-tag">3D</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- ─── Luxestates ─── -->
+        <a href="https://lux-estates.netlify.app/" target="_blank" class="project-card" data-category="Freelance"
+            data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">Freelance</span>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000"
+                        alt="Luxestates Real Estate" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">05 — FREELANCE</div>
+                    <h3 class="card-title">Luxestates</h3>
+                    <p class="card-description">Premium real estate website for brokers. Clean, sophisticated design
+                        showcasing luxury properties.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Real Estate</span>
+                        <span class="card-tag">Netlify</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- ─── Freshmart ─── -->
+        <a href="https://theidealshukla.github.io/freshmart/" target="_blank" class="project-card"
+            data-category="Freelance" data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">Freelance</span>
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1000"
+                        alt="Freshmart Grocery" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">06 — FREELANCE</div>
+                    <h3 class="card-title">Freshmart</h3>
+                    <p class="card-description">Modern, vibrant grocery store interface designed for freshness and ease
+                        of use with intuitive navigation.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">E-Commerce</span>
+                        <span class="card-tag">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- ─── Dantkriti (Wide) ─── -->
+        <a href="https://theidealshukla.github.io/DANTKRITI-Orofacial-Aesthetic-Centre-/" target="_blank"
+            class="project-card wide" data-category="Freelance" data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">Freelance</span>
+                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=2000"
+                        alt="Dantkriti Aesthetic Centre" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">07 — FREELANCE</div>
+                    <h3 class="card-title">Dantkriti</h3>
+                    <p class="card-description">Orofacial Aesthetic Centre reflecting a clean, professional environment
+                        with an emphasis on trust and care.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Healthcare</span>
+                        <span class="card-tag">Dental</span>
+                        <span class="card-tag">Professional</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- ─── Medicare ─── -->
+        <a href="https://medicare-online.netlify.app/" target="_blank" class="project-card" data-category="Freelance"
+            data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">Freelance</span>
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000"
+                        alt="Medicare Hospital" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">08 — FREELANCE</div>
+                    <h3 class="card-title">Medicare</h3>
+                    <p class="card-description">Healthcare hospital website with clean UX focusing on patient
+                        accessibility and information clarity.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Healthcare</span>
+                        <span class="card-tag">Netlify</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- ─── LuminaDerm ─── -->
+        <a href="https://dermaclinic-in.netlify.app/#/" target="_blank" class="project-card" data-category="Freelance"
+            data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">Freelance</span>
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1000"
+                        alt="LuminaDerm Clinic" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">09 — FREELANCE</div>
+                    <h3 class="card-title">LuminaDerm</h3>
+                    <p class="card-description">Dermatology clinic website with a soothing, premium aesthetic focusing
+                        on skin care excellence.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Dermatology</span>
+                        <span class="card-tag">React</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- ─── Dakshin Aura ─── -->
+        <a href="https://theidealshukla.github.io/dakshin-aura/" target="_blank" class="project-card"
+            data-category="Freelance" data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">Freelance</span>
+                    <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=1000"
+                        alt="Dakshin Aura" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">10 — FREELANCE</div>
+                    <h3 class="card-title">Dakshin Aura</h3>
+                    <p class="card-description">South Indian restaurant branding with warm, culturally rich design
+                        celebrating authentic flavors.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Restaurant</span>
+                        <span class="card-tag">Branding</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- ─── Modular Kitchen ─── -->
+        <a href="https://modularkitchnes.netlify.app/#portfolio" target="_blank" class="project-card"
+            data-category="Freelance" data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">Freelance</span>
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1000"
+                        alt="Modular Kitchen" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">11 — FREELANCE</div>
+                    <h3 class="card-title">Modular Kitchen</h3>
+                    <p class="card-description">Sleek portfolio showcasing premium custom modular kitchen designs with
+                        elegant interiors.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Interior</span>
+                        <span class="card-tag">Portfolio</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- ─── GSD Portfolio (Academic) ─── -->
+        <a href="https://github.com/gsd-build/get-shit-done" target="_blank" class="project-card dark-card"
+            data-category="Academic" data-tilt>
+            <div class="card-inner">
+                <div class="card-visual">
+                    <span class="card-badge">✦ Academic</span>
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000"
+                        alt="Get Shit Done - Development System" loading="lazy" />
+                    <div class="card-arrow">
+                        <span class="material-icons">arrow_outward</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-number">12 — ACADEMIC</div>
+                    <h3 class="card-title">GSD System</h3>
+                    <p class="card-description">A spec-driven development workflow system for AI-assisted coding.
+                        Meta-prompting and context engineering.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Node.js</span>
+                        <span class="card-tag">CLI</span>
+                        <span class="card-tag">DevTools</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  PARALLAX MARQUEE SCROLLER                                     -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <section class="projects-marquee">
+        <div class="marquee-track">
+            <span class="marquee-item">Freelance</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">Web Design</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">3D Experiences</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">UI/UX</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">Creative Dev</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">Branding</span>
+            <span class="marquee-separator">◆</span>
+            <!-- Duplicate for loop -->
+            <span class="marquee-item">Freelance</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">Web Design</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">3D Experiences</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">UI/UX</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">Creative Dev</span>
+            <span class="marquee-separator">◆</span>
+            <span class="marquee-item">Branding</span>
+            <span class="marquee-separator">◆</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  CTA + FOOTER                                                  -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <section class="projects-cta reveal-up">
+        <p class="cta-label">Ready to Collaborate?</p>
+        <a href="contact.html" style="text-decoration: none; color: inherit;">
+            <h2 class="cta-title">
+                Let's <span class="italic-accent">Build.</span>
+            </h2>
+            <div class="cta-underline"></div>
+        </a>
+    </section>
+
+    <footer class="projects-footer">
+        <div class="footer-links">
+            <a href="https://github.com/theidealshukla" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/theidealshukla" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/thenonidealist" target="_blank">Instagram</a>
+        </div>
+        <div class="footer-copy">
+            © 2026 Adarsh Shukla. All rights reserved.
+        </div>
+    </footer>
 
 
-    <!-- Mobile Menu Script -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  SCRIPTS                                                       -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- Mobile Menu -->
     <script src="js/mobile-menu.js"></script>
-    <!-- Mobile Menu Script -->
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const closeMenuBtn = document.getElementById('close-menu-btn');
@@ -415,46 +539,182 @@
                 document.body.style.overflow = '';
             }
         }
-
         mobileMenuBtn.addEventListener('click', toggleMenu);
         closeMenuBtn.addEventListener('click', toggleMenu);
+    </script>
 
-        // Project Filtering Logic
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  3D TILT, PARALLAX, SCROLL REVEAL, FILTER, CURSOR              -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <script>
+        (() => {
+            'use strict';
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => {
-                    b.classList.remove('active-tab', 'text-white');
-                    b.classList.add('bg-gray-100', 'text-slate-500');
+            // ── 1. Custom Cursor ────────────────────────────────────
+            const cursorDot = document.getElementById('cursorDot');
+            let cursorX = 0, cursorY = 0;
+            let dotX = 0, dotY = 0;
+
+            // Hide cursor on mobile
+            if (window.matchMedia('(pointer: fine)').matches) {
+                document.addEventListener('mousemove', (e) => {
+                    cursorX = e.clientX;
+                    cursorY = e.clientY;
                 });
 
-                // Add active class to clicked button
-                btn.classList.add('active-tab', 'text-white');
-                btn.classList.remove('bg-gray-100', 'text-slate-500');
+                function animateCursor() {
+                    dotX += (cursorX - dotX) * 0.15;
+                    dotY += (cursorY - dotY) * 0.15;
+                    cursorDot.style.left = dotX + 'px';
+                    cursorDot.style.top = dotY + 'px';
+                    requestAnimationFrame(animateCursor);
+                }
+                animateCursor();
 
-                const filterValue = btn.getAttribute('data-filter');
+                // Grow cursor on project cards
+                document.querySelectorAll('.project-card').forEach(card => {
+                    card.addEventListener('mouseenter', () => cursorDot.classList.add('hovering'));
+                    card.addEventListener('mouseleave', () => cursorDot.classList.remove('hovering'));
+                });
+            } else {
+                cursorDot.style.display = 'none';
+            }
 
-                projectCards.forEach(card => {
-                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'flex';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'scale(0.95)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 500);
+
+            // ── 2. 3D Tilt Effect on Cards ──────────────────────────
+            const tiltCards = document.querySelectorAll('[data-tilt]');
+            const tiltStrength = 8; // degrees
+
+            tiltCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    const rotateY = ((x - centerX) / centerX) * tiltStrength;
+                    const rotateX = ((centerY - y) / centerY) * tiltStrength;
+
+                    const inner = card.querySelector('.card-inner');
+                    if (inner) {
+                        inner.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                    }
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    const inner = card.querySelector('.card-inner');
+                    if (inner) {
+                        inner.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
                     }
                 });
             });
-        });
+
+
+            // ── 3. Scroll Reveal (IntersectionObserver) ─────────────
+            const revealElements = document.querySelectorAll('.reveal-up, .reveal-fade');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible', 'revealed');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -60px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Staggered reveal for project cards
+            projectCards.forEach((card, i) => {
+                card.style.transitionDelay = `${i * 100}ms`;
+                revealObserver.observe(card);
+            });
+
+
+            // ── 4. Parallax Hero Counter ────────────────────────────
+            const heroCounter = document.getElementById('heroCounter');
+
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+
+                // Parallax on hero counter
+                if (heroCounter) {
+                    heroCounter.style.transform = `translateY(calc(-50% + ${scrollY * 0.3}px))`;
+                }
+
+                // Filter bar shadow on scroll
+                const filterBar = document.getElementById('filterBar');
+                if (filterBar) {
+                    if (scrollY > 300) {
+                        filterBar.classList.add('scrolled');
+                    } else {
+                        filterBar.classList.remove('scrolled');
+                    }
+                }
+            }, { passive: true });
+
+
+            // ── 5. Project Filtering with Animations ────────────────
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const allCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active state
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // First: hide all with animation
+                    allCards.forEach(card => {
+                        card.classList.add('hiding');
+                    });
+
+                    // After animation: toggle display
+                    setTimeout(() => {
+                        allCards.forEach((card, i) => {
+                            const category = card.getAttribute('data-category');
+                            const shouldShow = filterValue === 'all' || category === filterValue;
+
+                            if (shouldShow) {
+                                card.classList.remove('hidden-card', 'hiding');
+                                // Stagger re-appearance
+                                setTimeout(() => {
+                                    card.classList.add('revealed');
+                                }, i * 60);
+                            } else {
+                                card.classList.add('hidden-card');
+                                card.classList.remove('hiding', 'revealed');
+                            }
+                        });
+                    }, 400);
+                });
+            });
+
+
+            // ── 6. Smooth image loading ─────────────────────────────
+            document.querySelectorAll('.card-visual img').forEach(img => {
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.6s ease';
+
+                if (img.complete) {
+                    img.style.opacity = '1';
+                } else {
+                    img.addEventListener('load', () => {
+                        img.style.opacity = '1';
+                    });
+                }
+            });
+
+        })();
     </script>
+
 </body>
 
 </html>
