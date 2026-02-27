@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Contact Me</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -183,14 +185,16 @@
                                         for="name">Name</label>
                                     <input
                                         class="w-full rounded-lg bg-input-bg border border-gray-200 text-gray-900 placeholder-gray-400 focus:border-black focus:ring-1 focus:ring-black focus:outline-none transition-all duration-300 px-4 py-3 text-sm"
-                                        id="name" name="name" placeholder="John Doe" type="text" required />
+                                        id="name" name="name" placeholder="John Doe" type="text" required
+                                        autocomplete="name" maxlength="100" />
                                 </div>
                                 <div class="space-y-1.5">
                                     <label class="block text-xs font-semibold tracking-wide text-gray-500 uppercase"
                                         for="email">Email</label>
                                     <input
                                         class="w-full rounded-lg bg-input-bg border border-gray-200 text-gray-900 placeholder-gray-400 focus:border-black focus:ring-1 focus:ring-black focus:outline-none transition-all duration-300 px-4 py-3 text-sm"
-                                        id="email" name="email" placeholder="john@example.com" type="email" required />
+                                        id="email" name="email" placeholder="john@example.com" type="email" required
+                                        autocomplete="email" maxlength="254" />
                                 </div>
                             </div>
                             <div class="space-y-1.5">
@@ -218,7 +222,7 @@
                                 <textarea
                                     class="w-full rounded-lg bg-input-bg border border-gray-200 text-gray-900 placeholder-gray-400 focus:border-black focus:ring-1 focus:ring-black focus:outline-none transition-all duration-300 px-4 py-3 text-sm resize-none"
                                     id="message" name="message" placeholder="Tell me about your project..." rows="4"
-                                    required></textarea>
+                                    required maxlength="5000"></textarea>
                             </div>
                             <div class="pt-2">
                                 <button id="submit-btn"
@@ -244,15 +248,10 @@
             BASED IN INDIA
         </div>
     </main>
-    <!-- Contact Form Handler -->
-    <script src="js/contact.js"></script>
-
-
     <!-- Mobile Menu Script -->
     <script src="js/mobile-menu.js"></script>
     <!-- Contact Form Handler -->
     <script src="js/contact.js"></script>
-
     <!-- Mobile Menu Script -->
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
